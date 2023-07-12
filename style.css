@@ -1,0 +1,33 @@
+:root {
+    /* colors */
+    --body-bg:              #fef7e5;
+    --primary:              #ff4b7e;
+    --primary-dark:         #c7016b;
+    --primary-light:        #feaab9;
+
+
+    /* fonts */
+    --font-default:         'Poppins', sans-serif;
+}
+
+body {
+    padding: 32px;
+    background-color: var(--body-bg);
+}
+
+section {
+    margin-top: 32px;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 1240px;
+}
+
+@media screen and (min-width: 992px) {
+    hgroup h1 {display: inline-block;}
+    hgroup .right {
+        float: right;
+        margin-top: 24px;
+    }
+}

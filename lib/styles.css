@@ -51,7 +51,15 @@ h1, h2, .font-normal {font-weight: 400;}
 h3, h4, h5, h6, strong, .font-bold {font-weight: 600;}
 
 /* links */
-a {text-decoration: none;}
+a, .text-primary {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: 600;
+    color: var(--primary-dark);
+}
 
 /* text styles */
 .underline {text-decoration: underline;}
@@ -112,6 +120,10 @@ ul {
     padding-left: 0;
     list-style-position: inside;
 }
+.list-inline li {
+    display: inline-block;
+}
+.list-inline li + li {margin-left: 8px;}
 
 /* icons */
 .icon {
@@ -119,3 +131,12 @@ ul {
     height: 20px;
     vertical-align: middle;
 }
+
+/* clear, floats */
+.clearfix::after {
+    clear: both;
+    content: '';
+    display: table;
+}
+.pull-left {float: left;}
+.pull-right {float: right;}
