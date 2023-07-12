@@ -1,0 +1,47 @@
+:root {
+    /* colors */
+    --grey:                 #FEFEFE;
+    --light:                #FEFEFE;
+    --dark:                 #0E0E0E;
+    --primary:              #527d3c;
+    --primary-dark:         #5f6350;
+    --primary-light:        #F9FAF5;
+
+    --accent-lavender:      #bbacc4;
+    --accent-lavender-light:#faf6fc;
+
+    --accent-olive:         #68737a;
+    --accent-olive-light:   #b3bdc4;
+
+    --danger: #ff6d63;
+
+
+    /* fonts */
+    --font-default:         'Poppins', sans-serif;
+}
+
+body {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: var(--light);
+}
+
+/* override */
+.fixed-width {
+    max-width: 992px;
+}
+
+/* toolbar */
+.toolbar {
+    padding: 32px;
+    border-radius: 8px;
+    background-color: var(--accent-lavender);
+}
+@media screen and (max-width: 767px) {
+    .toolbar .pull-left {
+        float: none !important;
+    }
+    .toolbar > .group {
+        margin-top: 16px;
+    }
+}

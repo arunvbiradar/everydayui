@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everyday UI - 04th September, 2013</title>
+
+    <!-- lib css -->
+    <link rel="stylesheet" href="../../../lib/styles.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="fixed-width">
+        <!-- toolbar -->
+        <section class="toolbar clearfix">
+            <div class="search pull-left">
+                <div class="input-addon-wrap">
+                    <span class="input-addon">
+                        <svg class="icon">
+                            <use href="./../../../lib/icon.svg#magnifier"></use>
+                        </svg>
+                    </span>
+                    <input type="text" placeholder="Search" class="input-control rounded">
+                </div>
+            </div>
+            <div class="group pull-right">
+                <div class="notification dropdown d-inline-block">
+                    <button class="btn btn-icon btn-rounded active">
+                        <svg class="icon">
+                            <use href="./../../../lib/icon.svg#bell"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="dropdown d-inline-block">
+                    <a href="javascript:void(0)" class="btn btn-outline btn-rounded">
+                        Export                        
+                        <svg class="icon">
+                            <use href="./../../../lib/icon.svg#chevron-down"></use>
+                        </svg>
+                    </a>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a href="javascript:void(0)">Save as CSV</a></li>
+                            <li><a href="javascript:void(0)">Save as PDF</a></li>
+                            <li><a href="javascript:void(0)">Save as DOCX</a></li>
+                            <li class="divider"></li>
+                            <li><a href="javascript:void(0)">Save as PNG</a></li>
+                            <li><a href="javascript:void(0)">Save as JPG</a></li>
+                            <li><a href="javascript:void(0)" class="disabled">Save as GIF</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

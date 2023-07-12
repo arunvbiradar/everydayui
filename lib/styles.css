@@ -180,6 +180,7 @@ ul {
 
 /* buttons */
 .btn {
+    cursor: pointer;
     line-height: 24px;
     padding: 8px 24px;
     color: var(--dark);
@@ -190,7 +191,7 @@ ul {
     background-color: var(--light);
 }
 .btn:hover, .btn:focus, .btn:active {
-    font-weight: 600;
+    font-weight: initial;
 }
 /* primary */
 .btn.btn-primary {
@@ -202,7 +203,114 @@ ul {
     font-weight: initial;
     background-color: var(--dark);
 }
+.btn-icon, .btn-outline {
+    border-color: var(--accent-olive-light);
+}
+.btn-icon:hover,
+.btn-icon:focus,
+.btn-icon:active,
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outlin:active {
+    color: var(--dark);
+    background-color: var(--accent-olive-light);
+}
+
 /* rouded */
 .btn-rounded {
     border-radius: 24px;
+}
+/* icon */
+.btn-icon {
+    padding: 8px 10px;
+    position: relative;
+}
+.btn-icon.active::after {
+    top: 1px;
+    right: 1px;
+    z-index: 1;
+    width: 6px;
+    height: 6px;
+    content: '';
+    position: absolute;
+    border-radius: 6px;
+    display: inline-block;
+    border: 2px solid var(--light);
+    background-color: var(--danger);
+}
+
+
+/* form */
+.input-control {
+    outline: none;
+    box-shadow: none;
+    line-height: 24px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: var(--dark);
+    font-family: var(--font-default);
+    border: 1px solid var(--accent-olive-light);
+}
+.input-control:focus {
+    color: var(--primary-dark);
+    border-color: var(--accent-olive-dark);
+}
+.input-wrap, .input-addon-wrap, .input-control {
+    background-color: var(--light);
+}
+.input-wrap, .input-addon-wrap {
+    padding: 0 12px;
+    border-radius: 24px;
+    border: 1px solid var(--accent-olive-light);
+}
+.input-wrap .input-control, .input-addon-wrap .input-control {
+    border: 0;
+    background-color: transparent;
+}
+
+/* displays */
+.d-none {display: none;}
+.d-flex {display: flex;}
+.d-inline {display: inline;}
+.d-inline-block {display: inline-block;}
+
+/* groups */
+.group > * + * {margin-left: 8px;}
+
+/* dropdown */
+.dropdown {
+    position: relative;
+}
+.dropdown .btn {
+    padding-right: 12px;
+}
+.dropdown .dropdown-content {
+    right: 0;
+    top: 100%;
+    display: none;
+    min-width: 186px;
+    padding: 8px 16px;
+    position: absolute;
+    border-radius: 8px;
+    background-color: var(--light);
+    border: 1px solid var(--accent-olive-light);
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown li > a {
+    font-size: 14px;
+    line-height: 32px;
+    color: var(--dark);
+    display: inlin-block;
+}
+.dropdown .divider {
+    margin: 16px -16px;
+    border-top: 1px solid var(--accent-olive-light)
+}
+.dropdown .disabled, 
+.dropdown [disabled] {
+    cursor: not-allowed;
+    font-weight: inherit;
+    color: var(--accent-olive-light);
 }
