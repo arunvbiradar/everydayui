@@ -1,0 +1,140 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap');
+
+:root {
+    /* colors */
+    --light:                #FEFEFE;
+    --dark:                 #333;
+    --primary:              #FFD200;
+    --primary-dark:         #5f6350;
+    --primary-light:        #F9FAF5;
+
+    --accent-lavender:      #bbacc4;
+    --accent-lavender-light:#faf6fc;
+
+    --accent-olive:         #68737a;
+    --accent-olive-light:   #b3bdc4;
+
+    --grey:                 #ECECEC;
+
+    --danger: #ff6d63;
+
+
+    /* fonts */
+    --font-default:         'Poppins', sans-serif;
+}
+
+body {
+    font-weight: 400;
+    font-family: var(--font-default);
+}
+
+/* buttons */
+.btn-primary {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 24px;
+    color: var(--dark);
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:active:hover,
+.btn-primary:active:focus {
+    color: var(--light);
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+
+/* page css */
+.register__section {
+    font-size: 16px;
+    max-width: 940px;
+    line-height: 24px;
+    counter-reset: register;
+}
+
+/* title */
+.user-register__headline {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+    margin: 32px 0 8px;
+}
+.kmt-register__headline {
+    margin-bottom: 32px;
+}
+.kmt-register__headline p {
+    margin-bottom: 0;
+}
+
+/* icon */
+.kmt-register__cell,
+.kmt-register__head h3::before {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: var(--primary);
+}
+.register__section svg {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+/* table */
+.kmt-register__body table {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 32px;
+}
+.kmt-register__body tbody tr:nth-of-type(odd) {
+    background-color: var(--grey);
+}
+.kmt-register__body td,
+.kmt-register__body th {
+    padding: 8px 12px;
+}
+.kmt-register__body td:nth-of-type(1) {
+    text-align: left;
+}
+.kmt-register__body td:nth-of-type(2) {
+    border: solid var(--dark);
+    border-width: 0 1px;
+}
+
+/* form */
+.kmt-register__head h3 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-bottom: 32px;
+}
+.kmt-register__head h3::before {
+    margin-right: 16px;
+    vertical-align: middle;
+    counter-increment: register;
+    content: counter(register);
+}
+.register__section label {
+    font-weight: 600;
+}
+.register__section .form-group {
+    margin-bottom: 32px;
+}
+
+/* radio & checkbox */
+.kmt-radio-container input {
+    width: 20px;
+    height: 20px;
+    margin-top: 0;
+    vertical-align: middle;
+}
