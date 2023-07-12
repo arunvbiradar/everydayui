@@ -140,3 +140,69 @@ ul {
 }
 .pull-left {float: left;}
 .pull-right {float: right;}
+
+/* layouts */
+.fixed-width {
+    margin: 0 auto;
+    padding: 0 24px;
+    max-width: 1366px;
+}
+.full-width {
+    padding: 0 80px;
+}
+@media screen and (max-width: 1024px) {
+    .full-width {padding: 0 32px;}
+}
+@media screen and (max-width: 1400px) {
+    .full-width {padding: 0 80px;}
+}
+
+/* background */
+.bg-primary-light {background-color: var(--primary-light);}
+
+/* cards and well */
+.well {
+    padding: 16px;
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 16px;
+}
+.well .title {
+    font-size: 32px;
+    line-height: 40px;
+}
+.well .title, .well .content {
+    margin-bottom: 16px;
+}
+@media screen and (min-width: 1024px) {
+    .well {padding: 32px;}
+}
+
+/* buttons */
+.btn {
+    line-height: 24px;
+    padding: 8px 24px;
+    color: var(--dark);
+    border-radius: 4px;
+    display: inline-block;
+    letter-spacing: 1px;
+    border: 1px solid var(--light);
+    background-color: var(--light);
+}
+.btn:hover, .btn:focus, .btn:active {
+    font-weight: 600;
+}
+/* primary */
+.btn.btn-primary {
+    color: var(--light);
+    border-color: var(--primary);
+    background-color: var(--primary);
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    font-weight: initial;
+    background-color: var(--dark);
+}
+/* rouded */
+.btn-rounded {
+    border-radius: 24px;
+}
