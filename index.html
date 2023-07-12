@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everyday UI</title>
+
+    <!-- lib css -->
+    <link rel="stylesheet" href="../../../lib/styles.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <!-- title -->
+        <hgroup class="clearfix">
+            <h1>Every Day UI</h1>
+            <div class="right">
+                <h5><span class="text-primary"></span> of <sapn class="totalDays"></sapn> UI</h5>
+                <h6>Started from 12th of July, 2023</h6>
+            </div>
+        </hgroup>
+        
+        <!-- 2023 -->
+        <section>
+            <h2>2023</h2>
+            <h3 class="mb-x">July</h3>
+            <nav>
+                <ul class="list-inline">
+                    <li><a href="./2023/july/12" target="_blank">12<sup>th</sup></a></li>
+                </ul>
+            </nav>
+        </section>
+    </main>
+    
+    <script>
+        let a = document.getElementsByTagName('a');
+        let aCount = document.querySelector('.text-primary');
+        aCount.textContent = a.length;
+
+        let startDate   = new Date('09/03/2013');
+        let endDate     = new Date();
+        let diff        = endDate.getTime() - startDate.getTime(); // time in milliseconds
+        let totalDays   = Math.ceil(diff/(1000*3600*24));
+        let days        = document.querySelector('.totalDays');
+        days.textContent = totalDays;
+    </script>
+</body>
+</html>
