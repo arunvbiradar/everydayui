@@ -1,0 +1,84 @@
+:root {
+    /* colors */
+    --light:                #FEFEFE;
+    --dark:                 #0E0E0E;
+    --primary:              #527d3c;
+    --primary-dark:         #5f6350;
+    --primary-light:        #F9FAF5;
+
+    --accent-lavender:      #bbacc4;
+    --accent-lavender-light:#faf6fc;
+
+    --accent-olive:         #68737a;
+    --accent-olive-light:   #b3bdc4;
+
+    --danger: #ff6d63;
+
+
+    /* fonts */
+    --font-default:         'Poppins', sans-serif;
+}
+
+body {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: var(--light);
+}
+
+/* restrict width */
+.fixed-width {
+    max-width: 1024px;
+}
+
+
+/* bg */
+.calender-well-bg {
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-image: url(./bg.png);
+    background-position: bottom right;
+}
+.calender-well-bg .content {
+    max-width: 60%;
+}
+
+@media (min-width: 568px) {
+    .calender-well-bg .title {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 768px) {
+    .calender-well-bg .title {
+        max-width: 85%;
+    }
+    .calender-well-bg .content {
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .calender-well-bg {
+        background-size: 50%;
+    }
+    .calender-well-bg .title,
+    .calender-well-bg .content {
+        float: left;
+        margin-bottom: 24px;
+    }
+    .calender-well-bg .title {
+        max-width: 45%;
+        padding-right: 16px;
+    }
+    .calender-well-bg .content {
+        max-width: 55%;
+        font-size: 16px;
+        line-height: 24px;
+        padding-left: 16px;
+    }
+    .calender-well-bg .body::after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+}
