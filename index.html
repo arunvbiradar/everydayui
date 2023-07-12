@@ -17,10 +17,21 @@
         <hgroup class="clearfix">
             <h1>Every Day UI</h1>
             <div class="right">
-                <h5><span class="text-primary"></span> of <sapn class="totalDays"></sapn> UI</h5>
+                <h5><span class="text-primary"></span> of <sapn class="totalDays"></sapn> UI [remaining <span class="remaining"></span>]</h5>
                 <h6>Started from 12th of July, 2023</h6>
             </div>
         </hgroup>
+
+        <!-- 2013 -->
+        <section>
+            <h2>2013</h2>
+            <h3 class="mb-x">September</h3>
+            <nav>
+                <ul class="list-inline">
+                    <li><a href="./2023/september/12" target="_blank">03<sup>rd</sup></a></li>
+                </ul>
+            </nav>
+        </section>
 
         <!-- 2023 -->
         <section>
@@ -45,6 +56,9 @@
         let totalDays   = Math.ceil(diff/(1000*3600*24));
         let days        = document.querySelector('.totalDays');
         days.textContent = totalDays;
+
+        let remaining   = document.querySelector('.remaining');
+        remaining.textContent = totalDays - a.length;
     </script>
 </body>
 </html>
