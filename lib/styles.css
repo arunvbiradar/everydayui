@@ -61,6 +61,11 @@ a:hover {
     color: var(--primary-dark);
 }
 
+/* small */
+small, .small {
+    font-size: 12px;
+}
+
 /* text styles */
 .underline {text-decoration: underline;}
 .strike {text-decoration: line-through;}
@@ -131,16 +136,46 @@ ul {
     height: 20px;
     vertical-align: middle;
 }
+.icon-circle-bg {
+    padding: 16px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    display: inline-block;
+    background-color: var(--grey);
+}
 
 /* clear, floats */
 .clearfix::after,
-.media::after {
+.media::after,
+.row::after {
     clear: both;
     content: '';
     display: table;
 }
-.pull-left {float: left;}
+.pull-left, .col {float: left;}
 .pull-right {float: right;}
+
+/* widths */
+.w-25 {width: 25%;}
+.w-50 {width: 50%;}
+.w-75 {width: 75%;}
+.w-full {width: 100%;}
+
+/* columns */
+.row {
+    margin-left: -16px;
+    margin-right: -16px;
+}
+.col {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+@media screen and (max-width: 767px) {
+    .col.w-25 {width: 100%;}
+    .col.w-50 {width: 100%;}
+    .col.w-75 {width: 100%;}
+    .col.w-full {width: 100%;}
+}
 
 /* layouts */
 .fixed-width {
@@ -187,6 +222,9 @@ ul {
 
 
 /* cards, well, media */
+.card, .well {
+    border: 1px solid var(--grey);
+}
 .card {
     overflow: hidden;
     border-radius: 4px;
@@ -219,6 +257,9 @@ ul {
 .well .title, .well .content {
     margin-bottom: 16px;
 }
+.well.well-lg {
+    padding: 32px;
+}
 @media screen and (min-width: 1024px) {
     .well {padding: 32px;}
 }
@@ -238,6 +279,29 @@ ul {
 
 .card.product .card-img {
     object-fit: cover;
+}
+
+.well.dashboard-chart {
+    padding-bottom: 0;
+}
+.well.dashboard-chart .card {
+    border: 0;
+    text-align: center;
+}
+.well.dashboard-chart .w-50 {
+    width: 100%;
+}
+@media screen and (min-width: 768px) {
+    .well.dashboard-chart .card {
+        text-align: left;
+    }
+    .well.dashboard-chart .w-50 {
+        width: 50%;
+    }
+}
+.well.dashboard-chart .title {
+    font-size: 16px;
+    margin-bottom: 48px;
 }
 
 
@@ -287,10 +351,18 @@ ul {
     color: var(--dark);
     background-color: var(--accent-olive-light);
 }
+.btn-icon svg {
+    width: 24px;
+    height: 24px;
+}
 
-/* rouded */
+/* rounded */
 .btn-rounded {
     border-radius: 24px;
+}
+/* circle */
+.btn-circle {
+    border-radius: 50%;
 }
 /* icon */
 .btn-icon {
