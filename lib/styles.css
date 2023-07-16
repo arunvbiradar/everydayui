@@ -187,6 +187,23 @@ ul {
 
 
 /* cards, well, media */
+.card {
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 32px;
+}
+.card-img {
+    max-width: 100%;
+}
+.card-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+}
+.card-body {
+    font-size: 14px;
+    line-height: 20px;
+}
 .well, .media {
     font-size: 14px;
     border-radius: 16px;
@@ -217,6 +234,10 @@ ul {
 }
 .media-body {
     float: left;
+}
+
+.card.product .card-img {
+    object-fit: cover;
 }
 
 
