@@ -1,0 +1,54 @@
+:root {
+    /* colors */
+    --light:                #FEFEFE;
+    --dark:                 #0E0E0E;
+    --primary:              #527d3c;
+    --primary-dark:         #5f6350;
+    --primary-light:        #F9FAF5;
+    --warning-light:        #FFE9E1;
+
+    --accent-lavender:      #bbacc4;
+    --accent-lavender-light:#faf6fc;
+
+    --accent-olive:         #68737a;
+    --accent-olive-light:   #b3bdc4;
+
+    --grey:                 #ECECEC;
+
+    --danger: #ff6d63;
+
+
+    /* fonts */
+    --font-default:         'Poppins', sans-serif;
+}
+
+body {
+    padding: 32px;
+    background-color: var(--light);
+}
+
+/* product cards */
+.card.product .card-img {
+    width: 100%;
+    height: 250px;
+}
+.product-wrapper {
+    margin: 0 -16px;
+}
+.product-wrapper .col {
+    width: 50%;
+    float: left;
+    padding: 0 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .product-wrapper .col {
+        width: 33.3333%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .product-wrapper .col {
+        width: 25%;
+    }
+}
