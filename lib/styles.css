@@ -71,28 +71,30 @@ small, .small {
 .strike {text-decoration: line-through;}
 
 /* margins */
-.m-x {margin: 8px}
-.m-2x {margin: 16px}
-.m-3x {margin: 24px}
-.m-4x {margin: 32px}
-.mt-x {margin-top: 8px}
-.mt-2x {margin-top: 16px}
-.mt-3x {margin-top: 24px}
-.mt-4x {margin-top: 32px}
-.mr-x {margin-right: 8px}
-.mr-2x {margin-right: 16px}
-.mr-3x {margin-right: 24px}
-.mr-4x {margin-right: 32px}
-.mb-x {margin-bottom: 8px}
-.mb-2x {margin-bottom: 16px}
-.mb-3x {margin-bottom: 24px}
-.mb-4x {margin-bottom: 32px}
-.ml-x {margin-left: 8px}
-.ml-2x {margin-left: 16px}
-.ml-3x {margin-left: 24px}
-.ml-4x {margin-left: 32px}
+.m-0 {margin: 0 !important}
+.m-x {margin: 8px !important}
+.m-2x {margin: 16px !important}
+.m-3x {margin: 24px !important}
+.m-4x {margin: 32px !important}
+.mt-x {margin-top: 8px !important}
+.mt-2x {margin-top: 16px !important}
+.mt-3x {margin-top: 24px !important}
+.mt-4x {margin-top: 32px !important}
+.mr-x {margin-right: 8px !important}
+.mr-2x {margin-right: 16px !important}
+.mr-3x {margin-right: 24px !important}
+.mr-4x {margin-right: 32px !important}
+.mb-x {margin-bottom: 8px !important}
+.mb-2x {margin-bottom: 16px !important}
+.mb-3x {margin-bottom: 24px !important}
+.mb-4x {margin-bottom: 32px !important}
+.ml-x {margin-left: 8px !important}
+.ml-2x {margin-left: 16px !important}
+.ml-3x {margin-left: 24px !important}
+.ml-4x {margin-left: 32px !important}
 
 /* paddings */
+.p-0 {padding: 0;}
 .p-x {padding: 8px}
 .p-2x {padding: 16px}
 .p-3x {padding: 24px}
@@ -136,6 +138,18 @@ ul {
     height: 20px;
     vertical-align: middle;
 }
+.icon-circle {
+    width: 16px;
+    height: 16px;
+    padding: 8px;
+    border-radius: 50%;
+    box-sizing: content-box;
+    border: 1px solid var(--grey);
+}
+.icon-lg {
+    width: 40px;
+    height: 40px;
+}
 .icon-circle-bg {
     padding: 16px;
     border-radius: 50%;
@@ -147,6 +161,7 @@ ul {
 /* clear, floats */
 .clearfix::after,
 .media::after,
+.well::after,
 .row::after {
     clear: both;
     content: '';
@@ -160,6 +175,7 @@ ul {
 .w-50 {width: 50%;}
 .w-75 {width: 75%;}
 .w-full {width: 100%;}
+.w-33 {width: 33.3333%;}
 
 /* columns */
 .row {
@@ -249,6 +265,7 @@ ul {
 .well {
     padding: 16px;
     line-height: 20px;
+    margin-bottom: 32px;
 }
 .well .title {
     font-size: 32px;
@@ -261,7 +278,11 @@ ul {
     padding: 32px;
 }
 @media screen and (min-width: 1024px) {
-    .well {padding: 32px;}
+    .well:not(.well-sm) {padding: 32px;}
+    .well.well-sm {padding: 24px;}
+}
+.wrap + .wrap {
+    margin-top: 16px;
 }
 
 .media {
