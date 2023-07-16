@@ -133,7 +133,8 @@ ul {
 }
 
 /* clear, floats */
-.clearfix::after {
+.clearfix::after,
+.media::after {
     clear: both;
     content: '';
     display: table;
@@ -158,14 +159,41 @@ ul {
 }
 
 /* background */
-.bg-primary-light {background-color: var(--primary-light);}
+.bg-primary {background-color: var(--primary) !important;}
+.bg-primary-light {background-color: var(--primary-light) !important;}
+.bg-warning-light {background-color: var(--warning-light) !important;}
+.bg-lavender {background-color: var(--accent-lavender) !important;}
+.bg-lavender-light {background-color: var(--accent-lavender-light) !important;}
+.bg-olive-light {background-color: var(--accent-olive-light) !important;}
 
-/* cards and well */
+/* text colors */
+.text-light {color: var(--light) !important;}
+.text-primary {color: var(--primary) !important;}
+.text-dark {color: var(--dark) !important;}
+.text-danger {color: var(--danger) !important;}
+
+
+/* badge */
+.badge {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0 8px;
+    line-height: 24px;
+    border-radius: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: var(--light);
+}
+
+
+/* cards, well, media */
+.well, .media {
+    font-size: 14px;
+    border-radius: 16px;
+}
 .well {
     padding: 16px;
-    font-size: 14px;
     line-height: 20px;
-    border-radius: 16px;
 }
 .well .title {
     font-size: 32px;
@@ -177,6 +205,20 @@ ul {
 @media screen and (min-width: 1024px) {
     .well {padding: 32px;}
 }
+
+.media {
+    padding: 32px;
+    margin-bottom: 32px;
+}
+.media-title {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+.media-body {
+    float: left;
+}
+
 
 /* buttons */
 .btn {
