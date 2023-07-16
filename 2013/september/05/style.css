@@ -1,0 +1,52 @@
+:root {
+    /* colors */
+    --light:                #FEFEFE;
+    --dark:                 #0E0E0E;
+    --primary:              #527d3c;
+    --primary-dark:         #5f6350;
+    --primary-light:        #F9FAF5;
+    --warning-light:        #FFE9E1;
+
+    --accent-lavender:      #bbacc4;
+    --accent-lavender-light:#faf6fc;
+
+    --accent-olive:         #68737a;
+    --accent-olive-light:   #b3bdc4;
+
+    --grey:                 #ECECEC;
+
+    --danger: #ff6d63;
+
+
+    /* fonts */
+    --font-default:         'Poppins', sans-serif;
+}
+
+/* login wrapper */
+.login-wrapper {
+    width: 320px;
+    display: flex;
+    margin: 0 auto;
+    max-width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+}
+.login-wrapper .logo-wrapper {
+    margin-bottom: 72px;
+}
+.login-wrapper h1 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+}
+.login-wrapper .social-buttons {
+    margin: 48px 0;
+}
+.login-wrapper .copyright {
+    margin-top: 72px;
+}
+.login-wrapper .button-group .btn {
+    width: 48%;
+    box-sizing: border-box;
+}

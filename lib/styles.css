@@ -223,18 +223,27 @@ ul {
 /* buttons */
 .btn {
     cursor: pointer;
-    line-height: 24px;
+    line-height: 20px;
     padding: 8px 24px;
+    text-align: center;
     color: var(--dark);
     border-radius: 4px;
     display: inline-block;
-    letter-spacing: 1px;
-    border: 1px solid var(--light);
+    border: 2px solid var(--grey);
     background-color: var(--light);
+}
+.btn .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    vertical-align: sub;
+    display: inline-block;
 }
 .btn:hover, .btn:focus, .btn:active {
     font-weight: initial;
+    background-color: var(--primary-light);
 }
+.btn-block {width: 100%;}
 /* primary */
 .btn.btn-primary {
     color: var(--light);
@@ -281,10 +290,30 @@ ul {
     background-color: var(--danger);
 }
 
+/* button group */
+.button-group {
+    display: block;
+}
+.button-group:not(.button-gap) .btn {
+    border-radius: 0;
+}
+.button-group:not(.button-gap) .btn:first-of-type {border-radius: 8px 0 0 8px;}
+.button-group:not(.button-gap) .btn:last-of-type {border-radius: 0 8px 8px 0;}
+.button-group:not(.button-gap) .btn + .btn {margin-left: -5px;}
+.button-group.button-gap .btn + .btn {margin-left: 8px;}
+
 
 /* form */
+label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: inline-block;
+}
 .input-control {
+    width: 100%;
     outline: none;
+    display: block;
     box-shadow: none;
     line-height: 24px;
     padding: 8px 12px;
@@ -293,20 +322,25 @@ ul {
     font-family: var(--font-default);
     border: 1px solid var(--accent-olive-light);
 }
+.input-wrap {
+    margin-bottom: 32px;
+}
 .input-control:focus {
     color: var(--primary-dark);
     border-color: var(--accent-olive-dark);
 }
-.input-wrap, .input-addon-wrap, .input-control {
+.input-addon-wrap, .input-control {
     background-color: var(--light);
 }
-.input-wrap, .input-addon-wrap {
+.input-addon-wrap {
     padding: 0 12px;
     border-radius: 24px;
     border: 1px solid var(--accent-olive-light);
 }
-.input-wrap .input-control, .input-addon-wrap .input-control {
+.input-addon-wrap .input-control {
     border: 0;
+    width: auto;
+    display: inline-block;
     background-color: transparent;
 }
 
